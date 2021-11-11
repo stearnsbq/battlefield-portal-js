@@ -1,0 +1,21 @@
+{
+  "name": "battlefield-portal-js",
+  "version": "1.0.0",
+  "description": "tool to convert novel js code to battlefield portal blockly xml to be imported into the rule editor tool for use in battlefield 2042 portal",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "battlefield",
+    "portal",
+    "blockly",
+    "xml",
+    "js"
+  ],
+  "author": "quinn50",
+  "license": "MIT",
+  "dependencies": {
+    "recast": "^0.20.5"
+  }
+}
