@@ -7,3 +7,4 @@ TODO:
 - Parse js api json into xml
     - work started
 - build a chrome extension to easily import xml built from this api / tool
+- documentation
