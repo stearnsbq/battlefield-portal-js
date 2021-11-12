@@ -1,6 +1,5 @@
 const Condition  = require('./model/Condition');
 const Gameplay = require('./model/Gameplay');
-const Literal  = require('./model/Literal');
 const Mod = require('./model/Mod');
 const Player = require('./model/Player');
 const { RuleEvent, EventPayloads } = require('./model/types');
