@@ -7,10 +7,12 @@ class Player{
     }
 
     static GetTeamId(playerOrNumber){
-        if(![EventPayloads.EventOtherPlayer, EventPayloads.EventPlayer, Literal.Number].includes(playerOrNumber.type)){
+        if(!([EventPayloads.EventOtherPlayer, EventPayloads.EventPlayer, LiteralType.Number].includes(playerOrNumber.type || playerOrNumber))){
             throw new SyntaxError("Syntax Error: Unsupported type for GetTeamId")
         }
         return {type: PlayerType.GetTeamId, value: playerOrNumber}
     }
 
 }
+
+module.exports = Player;

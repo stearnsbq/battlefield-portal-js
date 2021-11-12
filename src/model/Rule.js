@@ -16,10 +16,12 @@ class Rule {
     return this;
   }
 
-
   addCondition(condition){
-      this.conditions.push(condition)
-      return this;
+    this.conditions.push(condition)
+  }
+
+  addAction(action){
+    this.actions.push(action)
   }
 
 

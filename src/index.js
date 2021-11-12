@@ -1,18 +1,23 @@
 const Condition  = require('./model/Condition');
+const Gameplay = require('./model/Gameplay');
 const Literal  = require('./model/Literal');
 const Mod = require('./model/Mod');
-const { RuleEvent, Scope, LiteralType, EventPayloads } = require('./model/types');
+const Player = require('./model/Player');
+const { RuleEvent, EventPayloads } = require('./model/types');
 
 
 const baseMod = new Mod();
 
-const rule = baseMod.addRule("dome").listenTo(RuleEvent.OnGoing).onScope(Scope.Global)
+const rule = baseMod.addRule("New Rule").listenTo(RuleEvent.OnPlayerEarnedKill)
 
+const teamId = Player.GetTeamId(EventPayloads.EventPlayer);
 
-const condition = Condition.And()
+const condition = Condition.Equals(Gameplay.GetGameModeScore(teamId), Gameplay.GetGameModeTargetScore())
 
+const action = Gameplay.EndGameMode(teamId)
 
-rule.addCondition(condition)
+rule.addCondition(condition);
 
+rule.addAction(action);
 
-console.log(rule)
+baseMod.build()
