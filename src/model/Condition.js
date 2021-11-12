@@ -1,4 +1,4 @@
-export class Condition{
+class Condition{
     constructor(){
         this.cond = {}
     }
@@ -10,3 +10,5 @@ export class Condition{
 
 
 }
+
+module.exports = Condition;

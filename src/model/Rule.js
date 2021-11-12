@@ -1,4 +1,4 @@
-export class Rule {
+class Rule {
   constructor(name) {
     this.name = name;
     this.conditions = [];
@@ -17,12 +17,12 @@ export class Rule {
   }
 
 
-  addCondition(){
-      this.conditions.push()
+  addCondition(condition){
+      this.conditions.push(condition)
       return this;
   }
 
 
 }
 
-
+module.exports = Rule;

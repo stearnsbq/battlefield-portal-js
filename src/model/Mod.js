@@ -1,9 +1,9 @@
-import { Rule } from "./Rule";
-
-export class Mod{
+const Rule = require('./Rule');
+class Mod{
 
     constructor(){
         this.rules = [];
+        this.subroutineMap = {};
     }
 
     addRule(name){
@@ -14,10 +14,21 @@ export class Mod{
     }
 
 
+    addSubroutine(name, routine){
+        this.subroutineMap[name] = routine;
+    }
+
+
     // builds our mod into xml for import in battlefield portal rule builder
     build(){
+
+        for(const rule of rules){
+
+        }
 
     }
 
 
 }
+
+module.exports = Mod;

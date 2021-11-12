@@ -1,5 +1,5 @@
 
-export const RuleEvent = {
+const RuleEvent = {
     OnGoing: 0,
     OnGameModeEnding: 1,
     OnGameModeStarted: 2,
@@ -14,9 +14,25 @@ export const RuleEvent = {
     OnTimeLimitReached: 11,
   };
   
-  export const Scope = {
+const Scope = {
     Global: 0,
     Player: 1,
     Team: 2,
-  };
-  
+};
+
+
+const LiteralType = {
+  Boolean: 0,
+  Number: 1,
+  Text: 2
+}
+
+const EventPayloads = {
+  EventOtherPlayer: 0,
+  EventPlayer: 1,
+  EventTeam: 2
+}
+
+
+
+module.exports = {RuleEvent, Scope, LiteralType, EventPayloads}
