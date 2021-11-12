@@ -15,24 +15,43 @@ const RuleEvent = {
   };
   
 const Scope = {
-    Global: 0,
-    Player: 1,
-    Team: 2,
+    Global : "Global",
+    Player: "Player",
+    Team: "Team",
 };
 
 
 const LiteralType = {
-  Boolean: 0,
-  Number: 1,
-  Text: 2
+  Boolean: "Boolean",
+  Number: "Number",
+  Text: "Text"
 }
 
 const EventPayloads = {
-  EventOtherPlayer: 0,
-  EventPlayer: 1,
-  EventTeam: 2
+  EventOtherPlayer: "EventOtherPlayer",
+  EventPlayer : "EventPlayer",
+  EventTeam : "EventTeam"
 }
 
 
+const ConditionType = {
+  Equals: "EQUAL",
+  And: "AND"
+}
 
-module.exports = {RuleEvent, Scope, LiteralType, EventPayloads}
+
+const PlayerType = {
+  GetPlayers: "GetPlayers",
+  GetTeamId: "GetTeamId"
+}
+
+const GameplayType = {
+  GetGameModeScore: "GetGameModeScore"
+}
+
+class SyntaxError extends Error{
+
+}
+
+
+module.exports = {RuleEvent, Scope, LiteralType, EventPayloads, ConditionType, PlayerType, SyntaxError, GameplayType}

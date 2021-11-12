@@ -1,8 +1,19 @@
+const { LiteralType } = require('./types');
 class Literal{
-    constructor(type, value){
-        this.type = type;
-        this.value = value
+
+    static Boolean(value){
+        return {type: LiteralType.Boolean, value}
     }
+
+    static Text(value){
+        return {type: LiteralType.Text, value}
+    }
+
+    static Number(value){
+        return {type: LiteralType.Number, value}
+    }
+
+
 }
 
 module.exports = Literal

@@ -4,30 +4,15 @@ const Mod = require('./model/Mod');
 const { RuleEvent, Scope, LiteralType, EventPayloads } = require('./model/types');
 
 
-
 const baseMod = new Mod();
 
 const rule = baseMod.addRule("dome").listenTo(RuleEvent.OnGoing).onScope(Scope.Global)
 
 
-
-const literal = new Literal(LiteralType.Boolean, false)
-
-const lul = new Literal(LiteralType.Boolean, true)
-
-
-const condition = new Condition().Equals(literal, lul)
+const condition = Condition.And()
 
 
 rule.addCondition(condition)
 
 
-
-console.log(baseMod)
-
-
-
-
-
-
-
+console.log(rule)

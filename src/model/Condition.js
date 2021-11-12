@@ -1,11 +1,13 @@
+const { ConditionType } = require("./types");
+
 class Condition{
-    constructor(){
-        this.cond = {}
+
+   static Equals(value1, value2){
+        return {type: ConditionType.Equals, value1, value2};
     }
 
-    Equals(value1, value2){
-        this.cond = {value1, operator: "EQ", value2}
-        return this;
+   static And(value1, value2){
+        return {type: ConditionType.And, value1, operator: "AND", value2};
     }
 
 
